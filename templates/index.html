@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Healthcare Appointment Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         MAIN CONTAINER
+    =================================================== -->
+
+    <div class="container">
+
+
+        <!-- ==================================================
+             HEADER
+        =================================================== -->
+
+        <header>
+
+            <div class="logo">
+                🏥
+            </div>
+
+            <h1>
+                AI Healthcare Appointment Assistant
+            </h1>
+
+            <p class="subtitle">
+
+                Smart patient routing and
+                doctor appointment assistance
+
+            </p>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             INFORMATION BOX
+        =================================================== -->
+
+        <div class="info-box">
+
+            <strong>
+                How it works
+            </strong>
+
+            <p>
+
+                Enter your details and describe
+                your health problem. The AI will
+                suggest the appropriate hospital
+                department and available doctor.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             APPOINTMENT FORM
+        =================================================== -->
+
+        <form id="appointmentForm">
+
+
+            <!-- PATIENT NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Patient Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- AGE -->
+
+            <div class="form-group">
+
+                <label for="age">
+                    Age
+                </label>
+
+                <input
+                    type="text"
+                    id="age"
+                    placeholder="Example: 22"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- SYMPTOMS -->
+
+            <div class="form-group">
+
+                <label for="query">
+
+                    Describe Your Problem
+
+                </label>
+
+                <textarea
+                    id="query"
+                    placeholder="Example: I have fever and headache..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- SUBMIT BUTTON -->
+
+            <button
+                type="submit"
+                id="submitButton"
+            >
+
+                Check Appointment
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- ==================================================
+             LOADING
+        =================================================== -->
+
+        <div
+            id="loading"
+            class="loading"
+        >
+
+            <div class="spinner"></div>
+
+            <p>
+                AI is analyzing your request...
+            </p>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             ERROR MESSAGE
+        =================================================== -->
+
+        <div
+            id="errorMessage"
+            class="error-message"
+        >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             RESULT
+        =================================================== -->
+
+        <div
+            id="result"
+            class="result"
+        >
+
+
+            <h2>
+                Appointment Result
+            </h2>
+
+
+
+            <!-- PATIENT -->
+
+            <div class="result-card">
+
+                <h3>
+                    👤 Patient
+                </h3>
+
+                <p>
+
+                    <strong>Name:</strong>
+
+                    <span id="patientName">
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Age:</strong>
+
+                    <span id="patientAge">
+                    </span>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TRIAGE -->
+
+            <div class="result-card">
+
+                <h3>
+                    🏥 Recommended Department
+                </h3>
+
+                <p>
+
+                    <strong>Ward:</strong>
+
+                    <span
+                        id="ward"
+                        class="ward-badge"
+                    >
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Reason:</strong>
+
+                    <span id="reason">
+                    </span>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- DOCTOR -->
+
+            <div class="result-card">
+
+                <h3>
+                    👨‍⚕️ Doctor
+                </h3>
+
+                <p>
+
+                    <strong>Doctor:</strong>
+
+                    <span id="doctor">
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Next Slot:</strong>
+
+                    <span id="nextSlot">
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Appointment Duration:</strong>
+
+                    <span id="slotMinutes">
+                    </span>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             DISCLAIMER
+        =================================================== -->
+
+        <div class="disclaimer">
+
+            <strong>
+                Important:
+            </strong>
+
+            This is an academic demonstration project.
+            It does not provide medical diagnosis or
+            replace professional medical advice.
+
+            For serious emergencies, contact your
+            local emergency medical service immediately.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>

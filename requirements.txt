@@ -1,0 +1,4 @@
+Flask
+pandas
+langchain-groq
+langchain-core

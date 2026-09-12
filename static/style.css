@@ -1,0 +1,431 @@
+/* =========================================================
+   GENERAL PAGE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 30px 15px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f3ff,
+            #f7fbff
+        );
+
+    color: #1f2937;
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.logo {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    color: #1565c0;
+
+    font-size: 30px;
+
+}
+
+
+.subtitle {
+
+    color: #64748b;
+
+    margin-top: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.info-box {
+
+    background: #eff6ff;
+
+    border-left:
+        5px solid #2563eb;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.6;
+
+}
+
+
+.info-box p {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+
+}
+
+
+textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+button:disabled {
+
+    background: #94a3b8;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+.spinner {
+
+    width: 40px;
+
+    height: 40px;
+
+    margin: auto;
+
+    border:
+        4px solid #e2e8f0;
+
+    border-top:
+        4px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result {
+
+    display: none;
+
+    margin-top: 30px;
+
+}
+
+
+.result h2 {
+
+    color: #1565c0;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.result-card {
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.result-card h3 {
+
+    margin-top: 0;
+
+    color: #334155;
+
+}
+
+
+.result-card p {
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   WARD BADGE
+========================================================= */
+
+.ward-badge {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer {
+
+    margin-top: 30px;
+
+    padding: 15px;
+
+    background: #fff7ed;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #7c2d12;
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+
+    .container {
+
+        padding: 22px;
+
+    }
+
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+}
